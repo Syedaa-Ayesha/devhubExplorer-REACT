@@ -1,6 +1,6 @@
 :root {
   --bg-color-900: #2c3746;
-  --bg-color-700: #555459;
+  --bg-color-700: #424147;
   --bg-color-500: #354152;
   --text-color: #f0f8ff;
   --box-shadow1: #9dbbdbf9;
@@ -48,12 +48,14 @@
   font-size: 20px;
   font-weight: 700;
   cursor: pointer;
+  border-bottom: 4px solid #c4932a;
+  border-radius: 4px;
 }
-
 .modeimg {
   position: relative;
   top: 10px;
   height: 30px;
+
 }
 
 .mode .modeWrapper {
@@ -165,34 +167,19 @@ button {
 }
 
 .socialInfo {
-  position: relative;
+  /* position: relative; */
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 10px;
 }
-
-.socialInfo img {
-  height: 20px;
-}
-
-.socialInfo .img1 {
-  position: relative;
-  left: -6px;
-  top: 4px;
-}
-
-.socialInfo .img2 {
-  position: relative;
-  left: -6px;
-  top: 4px;
-}
-
-.socialInfo a {
-  text-decoration: none;
+.socialInfo a{
+  border-radius: 6px;
+  font-weight: 600;
+  background: var(--bg-color-500);
   color: var(--text-color);
-}
-
-.socialInfo p {
-  margin-bottom: 5px;
+  text-decoration: none;
+  padding: 12px;
+  cursor: pointer;
 }
 
 /* Responsive Design */

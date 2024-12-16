@@ -25,7 +25,7 @@ export default function Displaydev() {
 
   const onChangeHandler = (e) => {
     setUser(e.target.value);
-    setError(false); // Reset the error when typing a new username
+    setError(false); 
   };
 
   const searchUser = async () => {
@@ -97,11 +97,13 @@ export default function Displaydev() {
               </div>
             </div>
             <div className="socialInfo">
-              <p><img className='img1' src={img1} alt="Not Found" /><a href={data.blog} target='_blank'>LinkedIn</a></p>
-              <p><img className='img2' src={img2} alt="Not Found" /><a href='/'>Fiverr</a></p>
+            <p> <span>{data.location}</span></p>
+                <a href={data.html_url} className='btn' target="_blank" rel="noreferrer">Dive Into Profile</a>
+              {/* <p><img className='img1' src={img1} alt="Not Found" /><a href={data.blog} target='_blank'>LinkedIn</a></p> */}
+              {/* <p><img className='img2' src={img2} alt="Not Found" /><a href='www.fiverr.com'>Fiverr</a></p> */}
               
             </div>
-            <p> <span>{data.location}</span></p>
+            
           </div>
         ) : (
           <></>
