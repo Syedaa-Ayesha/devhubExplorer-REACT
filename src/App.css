@@ -1,0 +1,231 @@
+:root {
+  --bg-color-900: #2c3746;
+  --bg-color-700: #555459;
+  --bg-color-500: #354152;
+  --text-color: #f0f8ff;
+  --box-shadow1: #9dbbdbf9;
+  --border-image: rgb(132, 121, 74);
+}
+
+.light {
+  --bg-color-900: #ffffff;
+  --text-color: #27313d;
+  --bg-color-500: #e8edf1;
+  --box-shadow1: #9dbbdbf9;
+  --border-image: rgb(244, 233, 233);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.container {
+  width: 42%;
+  max-height: max-content;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  color: var(--text-color);
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modeimg {
+  position: relative;
+  top: 10px;
+  height: 30px;
+}
+
+.mode .modeWrapper {
+  cursor: pointer;
+  border: 1px solid var(--border-image);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.part1,
+.part2,
+.part3 {
+  width: 85%;
+}
+
+.part1-item,
+.part2-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.part2-item input {
+  outline: none;
+  width: 88%;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+input:focus {
+  box-shadow: 0 0 8px var(--box-shadow1);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: #c4932a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(196, 147, 42, 0.975);
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.joiningDate,
+.updatedDate {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.bio {
+  font-weight: 400;
+  text-align: center;
+}
+
+
+.part3-item {
+  border-radius: 10px;
+  padding: 36px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--bg-color-900);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.userinfo {
+  text-align: center;
+}
+
+.profile img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-color-700);
+}
+
+.gitInfo {
+  width: 96%;
+  height: 75px;
+  border-radius: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--bg-color-500);
+  padding: 6px 0;
+}
+
+.gitInfo p {
+  margin-top: 4px;
+}
+
+.socialInfo {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.socialInfo img {
+  height: 20px;
+}
+
+.socialInfo .img1 {
+  position: relative;
+  left: -6px;
+  top: 4px;
+}
+
+.socialInfo .img2 {
+  position: relative;
+  left: -6px;
+  top: 4px;
+}
+
+.socialInfo a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.socialInfo p {
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    gap: 15px;
+  }
+
+  .part1-item,
+  .part2-item {
+    width: 100%;
+  }
+
+  .part2-item input {
+    margin-right: 10px;
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .gitInfo {
+    height: max-content;
+    border-radius: 10px;
+    flex-direction: column;
+  }
+
+  .gitInfo p {
+    margin-top: 6px;
+  }
+}
